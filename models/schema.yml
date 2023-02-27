@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: fact_us_covid
+    description: County-level data per day with masks wearing informations
+    columns:
+      - name: date
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: states_fips_code
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: state_name
+        description: State name
+      - name: confirmed_cases
+        description: The total number of confirmed cases of COVID-19
+      - name: death
+        description: The total number of confirmed deaths of COVID-19 
+      - name: new_deaths
+        description: The number of new deaths cases of COVID-19
+      - name: new_confirmed_cases
+        description: The number of new confirmed cases of COVID-19
+      - name: daily_vaccinations
+        description: The number of vaccinations cases of COVID-19
+      - name: year_population
+        description: The population per year (2021 is missing so we take 2020)
+      - name: geo_id
+        description: Geographical identification
+      - name: state_geom
+        description: Geographical polygone
+
+sources:
+  - name: covid19_nyt
+    description: This data comes from a large number of interviews conducted online by the global data and survey firm Dynata at the request of The New York Times.
+    database: bigquery-public-data
+    schema: covid19_nyt
+    tables:
+      - name: us_states
+
+  - name: geo_us_boundaries
+    description: Geographical informations
+    database: bigquery-public-data
+    schema: geo_us_boundaries
+    tables:
+      - name: states
+
+  - name: ds_public_data
+    description: Public data from other sources
+    database: astrafy-nyt-covid
+    schema: ds_public_data
+    tables:
+      - name: us_states_vaccinations
+      - name: us_states_population
