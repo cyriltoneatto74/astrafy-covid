@@ -1,5 +1,4 @@
-# astrafy-covid
-Astrafy Covid Model:
+# Astrafy Covid Model:
 
 This model is based on multiple sources:
 - The New York Times US Coronavirus Database: https://github.com/nytimes/covid-19-data
