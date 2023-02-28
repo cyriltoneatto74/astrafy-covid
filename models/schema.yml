@@ -25,6 +25,8 @@ models:
         description: The number of vaccinations cases of COVID-19
       - name: year_population
         description: The population per year (2021 is missing so we take 2020)
+      - name: year_population
+        description: The all state population per year (2021 is missing so we take 2020)
       - name: geo_id
         description: Geographical identification
       - name: state_geom
@@ -51,4 +53,6 @@ sources:
     schema: ds_public_data
     tables:
       - name: us_states_vaccinations
+        description: Daily vaccination per state
       - name: us_states_population
+        description: Total population per state per year
