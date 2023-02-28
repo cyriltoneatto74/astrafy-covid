@@ -24,9 +24,9 @@ models:
       - name: daily_vaccinations
         description: The number of vaccinations cases of COVID-19
       - name: year_population
-        description: The population per year (2021 is missing so we take 2020)
-      - name: year_population
-        description: The all state population per year (2021 is missing so we take 2020)
+        description: The population per year (2021 is missing so we take 2020). Used for percentages when we analyse state kpi's.
+      - name: year_population_as
+        description: The all state population per year (2021 is missing so we take 2020). Used for percentages when we analyse all state kpi's.
       - name: geo_id
         description: Geographical identification
       - name: state_geom
