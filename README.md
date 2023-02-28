@@ -14,3 +14,5 @@ Additionally, there are some missing data points, such as the 2021 population fi
 It could be also interesting to improve the model and analysis with a forecast on the next 14 days or 28 days.
 
 To access the Looker Studio dashboard for this model, please visit: https://lookerstudio.google.com/reporting/9bfbc430-c68d-404e-9b95-78c5ca570e51/page/BChGD
+
+The model was built using dbt, and all the SQL code and data are stored in BigQuery.
